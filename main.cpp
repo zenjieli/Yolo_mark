@@ -795,7 +795,7 @@ int main(int argc, char *argv[])
 				std::string synset_name;
 				if (i.id < synset_txt.size()) synset_name = " - " + synset_txt[i.id];
 
-				int offset = i.id * 25;
+				int offset = i.id * 100;
 				int red = (offset + 0) % 255 * ((i.id + 2) % 3);
 				int green = (offset + 70) % 255 * ((i.id + 1) % 3);
 				int blue = (offset + 140) % 255 * ((i.id + 0) % 3);
