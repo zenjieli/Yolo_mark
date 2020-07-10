@@ -484,7 +484,7 @@ int main(int argc, char *argv[])
 		imshow(window_name, frame);
 		moveWindow(window_name, 0, 0);
 		setMouseCallback(window_name, callback_mouse_click);
-
+		
 		bool next_by_click = false;
 		bool marks_changed = false;
 
@@ -624,7 +624,7 @@ int main(int argc, char *argv[])
 					}
                     
 				}
-				std::cout << " trackbar_value = " << trackbar_value << std::endl;
+				std::cout << "Image " << trackbar_value << " " << jpg_filenames[trackbar_value] << std::endl;
 
 				old_trackbar_value = trackbar_value;
 
