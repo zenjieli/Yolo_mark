@@ -492,11 +492,8 @@ int main(int argc, char *argv[])
 		std::string const trackbar_name = "image num";
 		int tb_res = createTrackbar(trackbar_name, window_name, &trackbar_value, image_list_count);
 
-		int old_current_obj_id = -1, current_obj_id = 0;
-		std::string const trackbar_name_2 = "object id";
-		int const max_object_id = (synset_txt.size() > 0) ? synset_txt.size() : 20;
-		int tb_res_2 = createTrackbar(trackbar_name_2, window_name, &current_obj_id, max_object_id);
-
+		int old_current_obj_id = -1, current_obj_id = 0;		
+		int const max_object_id = (synset_txt.size() > 0) ? synset_txt.size() : 20;		
 
 		do {
 			//trackbar_value = min(max(0, trackbar_value), (int)jpg_filenames_path.size() - 1);
@@ -786,8 +783,7 @@ int main(int argc, char *argv[])
 			if (old_current_obj_id != current_obj_id)
 			{
 				full_image.copyTo(full_image_roi);
-				old_current_obj_id = current_obj_id;
-				setTrackbarPos(trackbar_name_2, window_name, current_obj_id);
+				old_current_obj_id = current_obj_id;				
 			}
 
             int selected_id = -1;
